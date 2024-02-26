@@ -1,0 +1,13 @@
+* {
+  font-family: monospace;
+  font-size: xx-large;
+}
+
+nav {
+  display: flex;
+}
+
+input:not([type=button]) {
+  width: 15ch;
+  background: none;
+}

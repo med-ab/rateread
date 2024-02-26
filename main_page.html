@@ -1,0 +1,8 @@
+<script>
+  var title='', author='', rating=''
+  var books_render=()=>fetch('/book?'+new URLSearchParams({title,author})).then(o=>o.json()).then(o=>document.querySelector('#books').innerHTML=o.map(o=>o.title))
+</script>
+book named <input type=search oninput="title=this.value" placeholder=title> by
+<input type=search oninput="author=this.value" placeholder=author> rated <input type=number oninput="rating=this.value" size=5 placeholder=rating>
+<input type="button" value="search" onclick="books_render()">
+<ul id=books></ul>
